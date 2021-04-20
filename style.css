@@ -1,0 +1,81 @@
+body{
+	margin: 0;
+	background-image: url(https://images.pexels.com/photos/242236/pexels-photo-242236.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+
+}
+
+h1{
+	color:blueviolet;
+	font-size: 18px
+}
+h3{
+	color: blueviolet;
+	border-block-start-style: dashed;
+	border-color: black;
+}
+
+p{
+	color: navy;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 17px;
+}
+li{
+	color: navy;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 17px;
+}
+
+.logo{
+	width: 100px;
+	height: 100px;
+	display: block;
+	
+}
+
+.todo-item{
+	display: flex;
+	justify-content: flex-start;
+	align-content: center;
+	padding: 20px 20px;
+	width:78%;
+	border-bottom: 1px solid;
+	font-family: 'Times New Roman', Times, serif;
+	color: black;
+	font-size: 10px;
+
+}
+/* 
+.todo-list{
+	background-color: white;
+	margin: auto;
+	width: 50%;
+	display: flex;
+	align-items: center;
+	padding: 30px;		 */
+
+	
+.container{
+	display:flex;
+
+}
+
+.leftColumn{
+	flex:1;
+	display:flex;
+	align-items: center;
+
+}
+
+.navbar {   
+	height: 100px;
+	background-color: bisque;
+	color: grey;
+	margin-bottom: 15px;
+	text-align: center;
+	font-size: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+ 
