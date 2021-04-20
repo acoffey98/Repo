@@ -1,0 +1,141 @@
+
+121 lines (107 sloc) 4.48 KB 
+
+
+Raw Blame 
+
+ Open this file in GitHub Desktop 
+  Fork this project and edit the file 
+ 
+  Fork this project and delete the file 
+ 
+
+1 /** 
+2  * Licensed under the Apache License, Version 2.0 (the "License"); 
+3  * you may not use this file except in compliance with the License. 
+4  * You may obtain a copy of the License at 
+5  * 
+6  *     http://www.apache.org/licenses/LICENSE-2.0 
+7  * 
+8  * Unless required by applicable law or agreed to in writing, software 
+9  * distributed under the License is distributed on an "AS IS" BASIS, 
+10  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+11  * See the License for the specific language governing permissions and 
+12  * limitations under the License. 
+13  */ 
+14 package com.sagar.nlp; 
+15 
+ 
+16 import opennlp.tools.util.Span; 
+17 
+ 
+18 import org.junit.Test; 
+19 
+ 
+20 import com.sagar.nlp.OpenNLPUtil; 
+21 
+ 
+22 import java.io.ByteArrayOutputStream; 
+23 import java.io.IOException; 
+24 import java.io.OutputStreamWriter; 
+25 import java.util.ArrayList; 
+26 import java.util.Arrays; 
+27 import java.util.List; 
+28 
+ 
+29 public class CustomNERPriceTesting { 
+30 
+ 
+31     private static OpenNLPUtil extractor; 
+32 
+ 
+33     static { 
+34         try { 
+35             extractor = new OpenNLPUtil(); 
+36         } catch (IOException e) { 
+37             e.printStackTrace(); 
+38         } 
+39     } 
+40      
+41     @Test 
+42     public void testColorFinder() { 
+43 
+ 
+44     	String document = "cycle more than $500"; 
+45     	 
+46     	List<String> docArray = new ArrayList<String>(); 
+47     	docArray.add(document); 
+48     	docArray.add("toys under 20$"); 
+49     	docArray.add("camera less than usd 200"); 
+50     	docArray.add("I love white car model NX 200 cost around more than $ 120"); 
+51 
+ 
+52     	 
+53     	for(String doc : docArray) { 
+54     		for (String sentence : extractor.segmentSentences(doc)) { 
+55                 System.out.println("sentence: " + sentence); 
+56                 String[] tokens = extractor.tokenizeSentence(sentence.toLowerCase()); 
+57                 System.out.println("Tokens -" + Arrays.asList(tokens)); 
+58                 Span[] spans = extractor.findMoney(tokens); 
+59                 double[] spanProbs = extractor.findMoneyProb(spans); 
+60                 System.out.println(" Span Size : " + spans.length + " - " ); 
+61                 int counter = 0; 
+62                 for (Span span : spans) { 
+63                     System.out.print("Price: "); 
+64                     for (int i = span.getStart(); i < span.getEnd(); i++) { 
+65                         System.out.print("-" + tokens[i] + "-"); 
+66                         if (i < span.getEnd()) { 
+67                             System.out.print(" "); 
+68                         } 
+69                     } 
+70                     System.out.println("Probability is: "+spanProbs[counter++]); 
+71                     System.out.println(); 
+72                 } 
+73             } 
+74     	} 
+75     } 
+76      
+77     public String posValue(String k) { 
+78     	String value = k; 
+79     	switch(k) { 
+80     	 case "CC": value = "Coordinating conjunction";break; 
+81     	 case "CD": value = "Cardinal number";break; 
+82     	 case "DT": value = "Determiner";break; 
+83     	 case "EX": value = "Existential there";break; 
+84     	 case "FW": value = "Foreign word";break; 
+85     	 case "IN": value = "Preposition or subordinating conjunction";break; 
+86     	 case "JJ": value = "Adjective";break; 
+87     	 case "JJR": value = "Adjective, comparative";break; 
+88     	 case "JJS": value = "Adjective, superlative";break; 
+89     	 case "LS": value = "List item marker";break; 
+90     	 case "MD": value = "Modal";break; 
+91     	 case "NN": value = "Noun, singular or mass";break; 
+92     	 case "NNS": value = "Noun, plural";break; 
+93     	 case "NNP": value = "Proper noun, singular";break; 
+94     	 case "NNPS": value = "Proper noun, plural";break; 
+95     	 case "PDT": value = "Predeterminer";break; 
+96     	 case "POS": value = "Possessive ending";break; 
+97     	 case "PRP": value = "Personal pronoun";break; 
+98     	 case "PRP$": value = "Possessive pronoun";break; 
+99     	 case "RB": value = "Adverb";break; 
+100     	 case "RBR": value = "Adverb, comparative";break; 
+101     	 case "RBS": value = "Adverb, superlative";break; 
+102     	 case "RP": value = "Particle";break; 
+103     	 case "SYM": value = "Symbol";break; 
+104     	 case "TO": value = "to";break; 
+105     	 case "UH": value = "Interjection";break; 
+106     	 case "VB": value = "Verb, base form";break; 
+107     	 case "VBD": value = "Verb, past tense";break; 
+108     	 case "VBG": value = "Verb, gerund or present participle";break; 
+109     	 case "VBN": value = "Verb, past participle";break; 
+110     	 case "VBP": value = "Verb, non-3rd person singular present";break; 
+111     	 case "VBZ": value = "Verb, 3rd person singular present";break; 
+112     	 case "WDT": value = "Wh-determiner";break; 
+113     	 case "WP": value = "Wh-pronoun";break; 
+114     	 case "WP$": value = "Possessive wh-pronoun";break; 
+115     	 case "WRB": value = "Wh-adverb";break; 
+116     	 default: break; 
+117     	} 
+118     	return value; 
+119     } 
+120      
