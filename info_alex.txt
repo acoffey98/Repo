@@ -1,0 +1,140 @@
+In the back end it knows what strings to use. 
+Class functionality 
+Properties file page, put file in proper package
+
+
+There are two databases 
+
+Look at the code 
+
+Find the methods used to extract the data and to add new data:
+Find out how the admin client populates
+how is the panel getting populated
+
+- Get an understand of how the panel gets populated
+- How to abstract out in its own unique 
+- Use angular and react or redux to display the page
+
+
+-use the same properties for the page
+- is there a better way to display the properties
+-make it better
+-demo GUI
+-add extra ideas what to make it better
+-how to take this page and make it better
+
+-demo suggestions
+- A list you can look through 
+-check boxes that summarizes this is go mobile
+what do you care about
+- what do you care about is sync, or metamanger
+
+-different branches you may care about or not and then have the option to do that
+
+
+
+-Go mobile properties or metadata properties filters
+-are there ways to 
+
+- dont need metamanager so
+-better ffiltering
+-the only show properties is changed
+
+this is a singular filter now
+Do a fresh buiild
+
+EX: Configure sync directory 
+how do i figure out this?
+
+
+
+AdminServiceimpl service- has a method createCollectionToBeSaved - 
+saves in database
+
+matches with i18n-strings
+
+-This creates the map and returns it
+-Doesnt do datbase call itself
+
+Method saveCollection- 
+-helper request
+-That was called form createCollectionToBeSaved method and this is where it is goign
+to save into the databse
+
+doSave- use the mpa that was building up and trying to get fields out of that map
+
+createSearchFieldsToBeSaved- 
+
+
+
+
+Figure out what methods used to extract the data and to add new data to the databse:
+
+
+
+Set up breakpoints within these methods :
+admin client - 
+
+
+saveCollection
+doSave
+getCollectionFeatures
+
+See how data is pushed or whatever
+- use that same methods or technique to create a new panel that would be able to poulate 
+and using same style to update or populate new table
+
+angular,react - is client side technology for better improving panels to display panels
+- figure out how that panel is populate
+-how the panel can update or add new ones, or remove them
+-recall the same dosave methods and passing in collection parameters
+for a new client side request  
+
+
+DATABASE CALL:
+getDeattures
+
+creates connection object
+statement
+string sql 
+uses database link name
+
+conn = 
+add breakpoint under sql = " " 
+variable 
+view sql object - get idea what its trying to grab out of DB 
+
+put sql in dBeaver 
+throw sql scripts and see what vlues come back in DBeaver
+
+pulling data out - from users tab col table
+
+
+Gets feature object and adds to vector list its trying to build up
+
+WFS_Feature^^ 
+
+methods- getCollectionsByPropert is the filter box and use propertyname 
+- creates datbase link
+does a collections search 
+results sets
+grabs collection by na
+getting properties by collection
+
+may need all methods or may not need them all the asme
+how is panel generated
+what methods does it call to generate panel
+create own panel
+create same methods to populate own panel
+get a list of methods what it needs to populate panel
+set up gui and see how to display the info i have
+-filter
+-gui
+not using GWT to use panel, using REACT or Angular 
+
+how these lists are populated and back to client
+this is what i think it should like- 
+populating and has content- pretify it
+panels looking square and blank
+**Dean blank
+

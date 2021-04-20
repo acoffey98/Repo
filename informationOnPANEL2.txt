@@ -1,0 +1,86 @@
+Properties.java
+-pick random properties file 
+-Default values - set here are defaults (base properties) are default values 
+-The idea is that if the user comes in here and changes this value it no longer uses the default values
+-The non default values are the ones that 
+
+if there is an alteration and go into database (getAllOverrideValues) - gives the values that has been changed 
+
+
+The nondefault values are the ones that have been changed 
+-getting all the override values that people have changed
+
+
+on the first load - grabbing out of proeprties.java file 
+-no database calls required
+-generate the list of proeprties
+-some of tehse has been changed
+-we need to make sure the override changes 
+-do it all at once at the beginning override the values that the user set it to
+-srtat up first time make sure teh properties are correct 
+-just trying to inform me that it gets all properties that have been changed from default 
+
+
+net.compusult.wes.portfolio.Properties.OMIT_INTERAL_LAYERS_FROM_EXPORT - the override might be set to true
+
+
+Any values that has been changed in the DB or sacved in DB are going to override the values that it gets fromt he overrides 
+
+-Find location of client
+-Using new technologies 
+-With that 
+-How the GUI is going to work with GWT 
+
+-If it was with GWT you could plug it into and make new window 
+-Third parties 
+new pop up window 
+
+
+figure out how library works: Java interface library 
+make new module that open up windows with react
+the back end is essentially java
+own different front end, client module
+make calls to server to populate those panels
+    -
+any idea what he wants to do witht hat
+-new window module
+-possible to integrate that with GWT ?
+-or use the third party 
+
+if we are:
+drop a jar file for it in the libs file
+-GWT calls we use, have been simplifie
+getThreadRequestCall()
+
+-write a custom backend for react module 
+-react has its own way of talking to server from client
+through ASync methods to make a request
+
+
+-set values that aloow you
+change the properties
+
+ASKING: when we overwrite that 
+change the deafult value ? 
+-do it within the database Properties
+we understand how they are getting pulled and added from 
+
+how to display it with react, redux and new 
+
+
+
+
+recreate a new servlet? or backend module and this server will make a call to 
+
+request to get servlet 
+
+Direct it from react- custom new technology client
+-wants to find a way to siaplay these values in a more neat intuitive way 
+-Other than just do a search 
+
+
+-Libraries for react 
+find some kind of 
+
+
+filter out option maybe?

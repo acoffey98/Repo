@@ -1,0 +1,105 @@
+call the getValues method
+
+make a method and this might be already intitalized
+
+DatabaseProperitiesStore.getINstacnce(getValues,
+
+initialize- In constructor takes database factory class
+
+
+from wes_site_config_values wscv - TABLE 
+
+2 tables:
+
+from wes_site_config wsc " +
+				"join wes_site_config_values wscv
+
+
+
+reuse the database stores properties class 
+
+initalize properties store class- or create a varaible 
+.getOverrideAllValues 
+
+in order to initalize this class- 
+
+make a call this this calss 
+
+
+configModuleManager.getInstance(methods) 
+-calling it from single location 
+-call get configModules 
+-call it from up to me
+-Call the version of modules anywhere
+-make changes 
+-siteconfigconfig module IMple
+-get configModules -gives you back a list of onlyy care about the sit config module out of that list 
+and service config module 
+
+
+
+The config module manager is where the configModule gets initialized 
+
+
+RECREATE THE SELECT SCRIPT 
+-figure out how i will initialize the database store 
+-or how to call instance of this method
+-so i can get overrides methods 
+
+find a way to export properties from admin client and the config module manager- 
+
+
+
+find out how to add new data to database- same in database properties store 
+- call to set new 
+- or call setValues
+
+
+
+Idea of how the database calls work and populate the GUI add new content back into database
+-figure out where this panel will sit
+-where will this module still sit 
+-properties is admin only 
+-add a new package : In client- Admin
+make subclass in Admin class
+put module under client 
+
+poke around on the GUI
+-do gui and see the panel you like look of
+-see how panel is initalize d
+-how to arrange the GUI 
+-view ports (great for tables) 
+-viewStore () 
+-figure out what calls i need to make 
+-calling the getInstance on teh first module load will get the modular load 
+-instance gets created and will always be there 
+
+
+MY MODULE IS CALLED - PropertiesViewPanel UNDER CLIENT-> ADMIN 
+
+create a new docable class - move around view panel 
+- docable class 
+- implements docable 
+-valid locations to be doced to 
+-url it can hit 
+[4:32 PM] Tylor Mercer
+
+docable is a interface how a docable will react. 
+how it will handle 
+-take a docable and put in seperate windows it need back buttons 
+-it needs undoc locations
+-essentially an interface the basic functionality of a docable
+
+net.compusult.wes.client.widgets.dockpanel.Dockable
+net.compusult.wes.client.es.startpage.StartFrameDockable
+
+
+
+create docable- somewhat similar method calls
+-start page docable line 50 
+-MY docable will be in the admin client 
+-Now create own fresh docable class 
+-AdminDocable 
+
+
+

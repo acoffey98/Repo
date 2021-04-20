@@ -1,0 +1,51 @@
+import React from 'react'
+import ContentCSS from "./Content.module.css";
+
+const Nav = () => {
+	return (
+		<div className="card">
+			<p>This this is a paragraph that is long with a button underneath</p>
+			<button className={ContentCSS.btn}>Read More </button>
+		</div>
+	);
+}
+
+export default Nav;
+
+
+.btn{
+	background-color: brown;
+	border: 2px solid black;
+	color: white;
+	padding: 20px 40px;
+}
+
+
+
+
+
+import React from 'react'
+import HeaderCSS from './Header.module.css';
+
+const Header = () => {
+	return(
+		<header className="card">
+			<h1>Main Title of Page</h1>
+			<button className={HeaderCSS.btn}>Click Me! </button>
+		</header>
+	)
+}
+
+export default Header;
+
+
+.btn {
+	background-color: bisque;
+	padding: 10px 20px;
+	cursor: pointer;
+	border: none;
+	
+}
+
+
+https://nextjs.org/learn/basics/assets-metadata-css/assets
