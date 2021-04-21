@@ -1,7 +1,5 @@
 import React from 'react';   //react lib enables JSX libary to work
 
-
-
 //build the function
 function MyInfo(){
 	return(
